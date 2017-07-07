@@ -1,0 +1,6 @@
+[package]
+name = "to_html_table"
+version = "0.1.0"
+authors = ["Brahian E. Soto Mercedes <brahian@somebrel.com>"]
+
+[dependencies]
