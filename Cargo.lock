@@ -1,0 +1,48 @@
+[root]
+name = "to_html_table"
+version = "0.1.0"
+dependencies = [
+ "csv 1.0.0-beta.3 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "csv"
+version = "1.0.0-beta.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "csv-core 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "serde 1.0.9 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "csv-core"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "memchr 1.0.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "libc"
+version = "0.2.25"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "memchr"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "libc 0.2.25 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "serde"
+version = "1.0.9"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[metadata]
+"checksum csv 1.0.0-beta.3 (registry+https://github.com/rust-lang/crates.io-index)" = "158edc15f3da84af2ae2689ab84157f7f94a21dff3dec455320cf44be8963433"
+"checksum csv-core 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "ed4919aaefb12f555bb4e34aa6415b5db7e20e01e517427f13c2bde286ae9b53"
+"checksum libc 0.2.25 (registry+https://github.com/rust-lang/crates.io-index)" = "b807d3f9f61fec68ffa8b10389fffb9235aa0ffa32935be864b2329de5846b74"
+"checksum memchr 1.0.1 (registry+https://github.com/rust-lang/crates.io-index)" = "1dbccc0e46f1ea47b9f17e6d67c5a96bd27030519c519c9c91327e31275a47b4"
+"checksum serde 1.0.9 (registry+https://github.com/rust-lang/crates.io-index)" = "6a7c6b751a2e8d5df57a5ff71b5b4fc8aaee9ee28ff1341d640dd130bb5f4f7a"
