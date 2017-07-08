@@ -4,10 +4,11 @@ use std::env;
 use std::error::Error;
 use std::ffi::OsString;
 use std::process;
+use std::collections::HashMap;
 
 // This introduces a type alias so that we can conveniently reference
 // our record type.
-type Record = (String, String, String, String);
+type Record = HashMap<String, String>;
 
 fn run() -> Result<(), Box<Error>> {
     let file_path = get_first_arg()?;
