@@ -13,10 +13,30 @@ type Record = HashMap<String, String>;
 fn run() -> Result<(), Box<Error>> {
     let file_path = get_first_arg()?;
     let mut rdr = csv::Reader::from_path(file_path)?;
+
+    let mut html_file = String::new();
+    html_file.push_str("<!DOCTYPE html><html><head><title>");
+    html_file.push_str("2HTMLTABLE</title></head><body>\n");
+    html_file.push_str("<table>\n");
+
     for result in rdr.deserialize() {
         let record: Record = result?;
-        println!("{:?}", record);
+
+        let dish = record.get("name").unwrap();
+        let price = record.get("price").unwrap();
+        let description = record.get("description").unwrap();
+
+        html_file.push_str("\t<tr>\n");
+        html_file.push_str(&format!("\t\t<td>{}</td>\n", dish));
+        html_file.push_str(&format!("\t\t<td>{}</td>\n", price));
+        html_file.push_str(&format!("\t\t<td>{}</td>\n", description));
+        html_file.push_str("\t</tr>\n");
     }
+
+    html_file.push_str("</table>\n");
+    html_file.push_str("</body></html>");
+    println!("{}", html_file);
+
     Ok(())
 }
 
